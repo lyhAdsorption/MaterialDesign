@@ -65,6 +65,7 @@ public class MyNestedScrollParentL extends LinearLayout implements NestedScrolli
     @Override
     public boolean onStartNestedScroll(View child, View target, int nestedScrollAxes) {
         Log.i(Tag, "onStartNestedScroll--" + "child:" + child + ",target:" + target + ",nestedScrollAxes:" + nestedScrollAxes);
+
         return true;
     }
 
@@ -100,9 +101,9 @@ public class MyNestedScrollParentL extends LinearLayout implements NestedScrolli
         boolean show = showImg(dy);
         boolean hide = hideImg(dy);
 //        Log.i("onMeasure","show: " + show + ", hide: " + hide);
-        if(show||hide){
+        if(show||hide){//1.作业 消费过头
             consumed[1] = dy;//全部消费
-            scrollBy(0, dy );
+            scrollBy(0, dy);
             Log.i(Tag,"Parent滑动："+dy);
         }
         Log.i(Tag, "onNestedPreScroll--getScrollY():" + getScrollY() + ",dx:" + dx + ",dy:" + dy + ",consumed:" + consumed[1]);

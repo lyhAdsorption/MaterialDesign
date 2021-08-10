@@ -47,7 +47,7 @@ public class AuthorInfo {
      */
     public static List<AuthorInfo> createTestData() {
         List<AuthorInfo> authorInfoList = new ArrayList<>();
-        for (int count = 0; count < 6; count++) {
+        for (int count = 0; count < 60; count++) {
             AuthorInfo authorInfo1 = new AuthorInfo();
             authorInfo1.setMotto("美女，喜欢吃青椒吗？");
             authorInfo1.setNickName("蜡笔小新");

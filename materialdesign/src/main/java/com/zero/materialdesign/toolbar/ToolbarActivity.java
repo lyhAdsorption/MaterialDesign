@@ -20,7 +20,6 @@ import com.zero.materialdesign.databinding.ActivityToolbarBinding;
  * 2. 确保 Activity 可以扩展 AppCompatActivity
  * 3. 在应用清单中，将 <application> 元素设置为使用 appcompat 的其中一个 NoActionBar 主题背景。使用其中一个主题背景可以防止应用使用原生 ActionBar 类提供应用栏
  * 4. 向 Activity 的布局添加一个 Toolbar。例如，以下布局代码会添加一个 Toolbar，并赋予其浮动在 Activity 之上的外观
- * @author Administrator
  */
 public class ToolbarActivity extends AppCompatActivity {
 

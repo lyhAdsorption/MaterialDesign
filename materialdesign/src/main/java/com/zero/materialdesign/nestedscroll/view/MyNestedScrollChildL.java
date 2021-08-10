@@ -123,7 +123,7 @@ public class MyNestedScrollChildL extends LinearLayout implements NestedScrollin
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        int[] consumed = new int[2];
+        int[] consumed = new int[2];//[0]:x,[1]:y
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:{
                 mLastTouchY = (int)(event.getRawY() + .5f);
@@ -140,8 +140,7 @@ public class MyNestedScrollChildL extends LinearLayout implements NestedScrollin
                 int dy = mLastTouchY -y;
                 mLastTouchX = x;
                 mLastTouchY = y;
-//                consumed[0] = dx;
-//                consumed[1] = dy;
+
                 if(dispatchNestedPreScroll(dx,dy,consumed,null)){
                     Log.i("onMeasure","dy: " + dy + ", cosumed: " + consumed[1]);
                     dy -= consumed[1];
@@ -155,6 +154,10 @@ public class MyNestedScrollChildL extends LinearLayout implements NestedScrollin
                 }
                 break;
             }
+
+            case MotionEvent.ACTION_CANCEL:
+            case MotionEvent.ACTION_UP:
+                stopNestedScroll();
         }
         return true;
     }

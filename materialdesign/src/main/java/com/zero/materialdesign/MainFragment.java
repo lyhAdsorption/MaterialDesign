@@ -17,10 +17,14 @@ import com.zero.materialdesign.bottomsheets.BottomSheetsActivity;
 import com.zero.materialdesign.cardview.CardViewActivity;
 import com.zero.materialdesign.chips.ChipsActivity;
 import com.zero.materialdesign.coordinator.CoordinatorActivity;
+import com.zero.materialdesign.coordinatorstudy.CoordinatorMainActivity;
 import com.zero.materialdesign.drawer.DrawerLayoutActivity;
 import com.zero.materialdesign.floatingactionbutton.FloatActionButtonActivity;
 import com.zero.materialdesign.materialbutton.MaterialButtonActivity;
 import com.zero.materialdesign.materialtext.TextInputActivity;
+import com.zero.materialdesign.md2.nestedscrolling.NestedScrolling1Activity;
+import com.zero.materialdesign.md2.nestedscrollview.NestedScrollViewActivity;
+import com.zero.materialdesign.md2.tradition.NestedTraditionActivity;
 import com.zero.materialdesign.navigation.CloudMusicActivity;
 import com.zero.materialdesign.nestedscroll.activity.NestScrollActivity;
 import com.zero.materialdesign.snackbar.SnackBarActivity;
@@ -62,6 +66,10 @@ public class MainFragment extends ListFragment {
                 "ChipsActivity",//12
                 "ZActivity",//13
                 "NestScrollActivity",//14
+                "NestedTraditionActivity",//15
+                "NestedScrolling1Activity",//16
+                "NestedScrollViewActivity",//17
+                "CoordinatorMainActivity",//18
         };
         arrayAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, array);
         setListAdapter(arrayAdapter);
@@ -132,6 +140,22 @@ public class MainFragment extends ListFragment {
                 break;
             case 14://"NestScrollActivity",//14
                 gotoAct = new Intent(getActivity(), NestScrollActivity.class);
+                startActivity(gotoAct);
+                break;
+            case 15://"NestedTraditionActivity",//15
+                gotoAct = new Intent(getActivity(), NestedTraditionActivity.class);
+                startActivity(gotoAct);
+                break;
+            case 16://"NestedScrolling1Activity",//16
+                gotoAct = new Intent(getActivity(), NestedScrolling1Activity.class);
+                startActivity(gotoAct);
+                break;
+            case 17://"NestedScrollViewActivity",//17
+                gotoAct = new Intent(getActivity(), NestedScrollViewActivity.class);
+                startActivity(gotoAct);
+                break;
+            case 18://"CoordinatorMainActivity",//18
+                gotoAct = new Intent(getActivity(), CoordinatorMainActivity.class);
                 startActivity(gotoAct);
                 break;
             default:
